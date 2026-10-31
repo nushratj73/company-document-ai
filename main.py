@@ -21,4 +21,3 @@ def health_check():
         "status": "healthy",
         "service": "company-doc-ai"
     }
-
