@@ -30,3 +30,13 @@ SessionLocal = sessionmaker(
 # Base class for database models
 class Base(DeclarativeBase):
     pass
+
+
+# Provide a database session to API requests
+def get_db():
+    db = SessionLocal()
+
+    try:
+        yield db
+    finally:
+        db.close()
